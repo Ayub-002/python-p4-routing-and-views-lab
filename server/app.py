@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return f'<h1>Python Operations</h1>'
+    return f'<h1>Python Operations with Flask Routing and Views</h1>'
 
 
 @app.route('/print/<string:parameter>')
@@ -29,14 +29,14 @@ def math(num1, operation,num2):
         result= num1-num2
     elif operation == 'div':
         if num2 == 0:
-            return "cant be divided by zero"
+            return "cant be devided by zero"
         result= num1/num2
     elif operation =='*':
         result= num1*num2
     elif operation == '%':
         result= num1%num2
     else:
-        return f"wrong input"
+        return f"wrong operation input"
     return f'{result}'
     
 
